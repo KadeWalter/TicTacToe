@@ -9,3 +9,14 @@
 /Volumes/WD Passport/GitHub/TicTacToe/obj/Debug/netcoreapp2.1/TicTacToe.AssemblyInfo.cs
 /Volumes/WD Passport/GitHub/TicTacToe/obj/Debug/netcoreapp2.1/TicTacToe.dll
 /Volumes/WD Passport/GitHub/TicTacToe/obj/Debug/netcoreapp2.1/TicTacToe.pdb
+/Volumes/WD Passport/GitHub/TicTacToe/c#/bin/Debug/netcoreapp2.1/TicTacToe.deps.json
+/Volumes/WD Passport/GitHub/TicTacToe/c#/bin/Debug/netcoreapp2.1/TicTacToe.runtimeconfig.json
+/Volumes/WD Passport/GitHub/TicTacToe/c#/bin/Debug/netcoreapp2.1/TicTacToe.runtimeconfig.dev.json
+/Volumes/WD Passport/GitHub/TicTacToe/c#/bin/Debug/netcoreapp2.1/TicTacToe.dll
+/Volumes/WD Passport/GitHub/TicTacToe/c#/bin/Debug/netcoreapp2.1/TicTacToe.pdb
+/Volumes/WD Passport/GitHub/TicTacToe/c#/obj/Debug/netcoreapp2.1/TicTacToe.csprojAssemblyReference.cache
+/Volumes/WD Passport/GitHub/TicTacToe/c#/obj/Debug/netcoreapp2.1/TicTacToe.csproj.CoreCompileInputs.cache
+/Volumes/WD Passport/GitHub/TicTacToe/c#/obj/Debug/netcoreapp2.1/TicTacToe.AssemblyInfoInputs.cache
+/Volumes/WD Passport/GitHub/TicTacToe/c#/obj/Debug/netcoreapp2.1/TicTacToe.AssemblyInfo.cs
+/Volumes/WD Passport/GitHub/TicTacToe/c#/obj/Debug/netcoreapp2.1/TicTacToe.dll
+/Volumes/WD Passport/GitHub/TicTacToe/c#/obj/Debug/netcoreapp2.1/TicTacToe.pdb

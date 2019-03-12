@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Volumes/WD Passport/GitHub/TicTacToe/TicTacToe.csproj",
+      "projectUniqueName": "/Volumes/WD Passport/GitHub/TicTacToe/c#/TicTacToe.csproj",
       "projectName": "TicTacToe",
-      "projectPath": "/Volumes/WD Passport/GitHub/TicTacToe/TicTacToe.csproj",
+      "projectPath": "/Volumes/WD Passport/GitHub/TicTacToe/c#/TicTacToe.csproj",
       "packagesPath": "/Users/kadewalter/.nuget/packages/",
-      "outputPath": "/Volumes/WD Passport/GitHub/TicTacToe/obj/",
+      "outputPath": "/Volumes/WD Passport/GitHub/TicTacToe/c#/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
