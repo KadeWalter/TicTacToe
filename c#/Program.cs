@@ -55,7 +55,7 @@ namespace TicTacToe
                 else
                 {
                     PlayMove(board, rowToPlay, colToPlay, player);
-                    winner = FindWinner(board, player); // check if the player won 
+                    winner = FindWinner(board, player, rowToPlay, colToPlay); // check if the player won 
 
                     PrintBoard(board);
 
@@ -73,52 +73,37 @@ namespace TicTacToe
             return board;
         }
 
-        private static bool FindWinner(string[,] board, string player)
+        private static bool FindWinner(string[,] board, string player, int row, int col)
         {
-            if (CheckDiagonals(board, player) || CheckVerticals(board, player) || CheckHorizontals(board, player))
+            if (CheckDiagonals(board, player, row, col) || CheckVerticals(board, player, col) || CheckHorizontals(board, player, row))
                 return true;
             return false;
         }
 
-        private static bool CheckDiagonals(string[,] board, string player)
+        private static bool CheckDiagonals(string[,] board, string player, int rowPlayedOn, int colPlayedOn)
         {
             bool winner = true;
             // check diagonal from top left to bottom right
-            for (int row = 0, col = 0; row < board.GetLength(0) && col < board.GetLength(1); row++, col++)
+            if ((rowPlayedOn == 0 && colPlayedOn == 0) || (rowPlayedOn == 1 && colPlayedOn == 1) || (rowPlayedOn == 2 && colPlayedOn == 2))
             {
-                if (board[row, col] != player || board[row, col] == " ")
+                for (int row = 0, col = 0; row < board.GetLength(0) && col < board.GetLength(1); row++, col++)
                 {
-                    winner = false;
-                    break;
+                    if (board[row, col] != player)
+                    {
+                        winner = false;
+                        break;
+                    }
                 }
+                if (winner)
+                    return true;
             }
-            if (winner)
-                return true;
-
             // check diagonal from top right to bottom left
-            winner = true;
-            for (int row = 0, col = board.GetLength(1) - 1; row < board.GetLength(0) && col >= 0; row++, col--)
+            else if ((rowPlayedOn == 0 && colPlayedOn == 2) || (rowPlayedOn == 1 && colPlayedOn == 1) || (rowPlayedOn == 2 && colPlayedOn == 0))
             {
-                if (board[row, col] != player || board[row, col] == " ")
+                winner = true;
+                for (int row = 0, col = board.GetLength(1) - 1; row < board.GetLength(0) && col >= 0; row++, col--)
                 {
-                    winner = false;
-                    break;
-                }
-            }
-            if (winner)
-                return true;
-
-            return false;
-        }
-
-        private static bool CheckVerticals(string[,] board, string player)
-        {
-            for (int col = 0; col < board.GetLength(1); col++)
-            {
-                bool winner = true;
-                for (int row = 0; row < board.GetLength(0); row++)
-                {
-                    if (board[row, col] != player || board[row, col] == " ")
+                    if (board[row, col] != player)
                     {
                         winner = false;
                         break;
@@ -130,22 +115,35 @@ namespace TicTacToe
             return false;
         }
 
-        private static bool CheckHorizontals(string[,] board, string player)
+        private static bool CheckVerticals(string[,] board, string player, int colPlayedOn)
         {
+            bool winner = true;
             for (int row = 0; row < board.GetLength(0); row++)
             {
-                bool winner = true;
-                for (int col = 0; col < board.GetLength(1); col++)
+                if (board[row, colPlayedOn] != player)
                 {
-                    if (board[row, col] != player || board[row, col] == " ")
-                    {
-                        winner = false;
-                        break;
-                    }
+                    winner = false;
+                    break;
                 }
-                if (winner)
-                    return true;
             }
+            if (winner)
+                return true;
+            return false;
+        }
+
+        private static bool CheckHorizontals(string[,] board, string player, int rowPlayedOn)
+        {
+            bool winner = true;
+            for (int col = 0; col < board.GetLength(1); col++)
+            {
+                if (board[rowPlayedOn, col] != player)
+                {
+                    winner = false;
+                    break;
+                }
+            }
+            if (winner)
+                return true;
             return false;
         }
 
